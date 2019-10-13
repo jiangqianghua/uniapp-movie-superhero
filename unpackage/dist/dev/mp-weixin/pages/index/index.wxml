@@ -1,1 +1,1 @@
-<view>这是首页</view>
+<view class="page"><swiper class="carousel" indicator-dots="{{true}}" autoplay="{{true}}" interval="{{3000}}" duration="{{1000}}"><swiper-item><view class="swiper-item"><image class="carousel" src="../../static/carousel/batmanvssuperman.png" mode></image></view></swiper-item><swiper-item><view class="swiper-item"><image class="carousel" src="../../static/carousel/spiderman.png" mode></image></view></swiper-item></swiper></view>

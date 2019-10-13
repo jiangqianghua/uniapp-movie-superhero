@@ -1061,13 +1061,25 @@ function gz$gwx_1(){
 if( __WXML_GLOBAL__.ops_cached.$gwx_1)return __WXML_GLOBAL__.ops_cached.$gwx_1
 __WXML_GLOBAL__.ops_cached.$gwx_1=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
-Z([3,'这是首页'])
+Z([3,'page'])
+Z([1,true])
+Z([3,'carousel'])
+Z([1,1000])
+Z(z[1])
+Z([1,3000])
+Z([3,'swiper-item'])
+Z(z[2])
+Z([3,'../../static/carousel/batmanvssuperman.png'])
+Z(z[6])
+Z(z[2])
+Z([3,'../../static/carousel/spiderman.png'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_1);return __WXML_GLOBAL__.ops_cached.$gwx_1
 }
 function gz$gwx_2(){
 if( __WXML_GLOBAL__.ops_cached.$gwx_2)return __WXML_GLOBAL__.ops_cached.$gwx_2
 __WXML_GLOBAL__.ops_cached.$gwx_2=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
+Z([3,'page'])
 Z([3,'这是我的'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_2);return __WXML_GLOBAL__.ops_cached.$gwx_2
 }
@@ -1075,6 +1087,7 @@ function gz$gwx_3(){
 if( __WXML_GLOBAL__.ops_cached.$gwx_3)return __WXML_GLOBAL__.ops_cached.$gwx_3
 __WXML_GLOBAL__.ops_cached.$gwx_3=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
+Z([3,'page'])
 Z([3,'这是搜索'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_3);return __WXML_GLOBAL__.ops_cached.$gwx_3
 }
@@ -1086,7 +1099,22 @@ var x=['./pages/index/index.wxml','./pages/me/me.wxml','./pages/search/serach.wx
 var m0=function(e,s,r,gg){
 var z=gz$gwx_1()
 var oB=_n('view')
-var xC=_oz(z,0,e,s,gg)
+_rz(z,oB,'class',0,e,s,gg)
+var xC=_mz(z,'swiper',['autoplay',1,'class',1,'duration',2,'indicatorDots',3,'interval',4],[],e,s,gg)
+var oD=_n('swiper-item')
+var fE=_n('view')
+_rz(z,fE,'class',6,e,s,gg)
+var cF=_mz(z,'image',['mode',-1,'class',7,'src',1],[],e,s,gg)
+_(fE,cF)
+_(oD,fE)
+_(xC,oD)
+var hG=_n('swiper-item')
+var oH=_n('view')
+_rz(z,oH,'class',9,e,s,gg)
+var cI=_mz(z,'image',['mode',-1,'class',10,'src',1],[],e,s,gg)
+_(oH,cI)
+_(hG,oH)
+_(xC,hG)
 _(oB,xC)
 _(r,oB)
 return r
@@ -1095,20 +1123,22 @@ e_[x[0]]={f:m0,j:[],i:[],ti:[],ic:[]}
 d_[x[1]]={}
 var m1=function(e,s,r,gg){
 var z=gz$gwx_2()
-var fE=_n('view')
-var cF=_oz(z,0,e,s,gg)
-_(fE,cF)
-_(r,fE)
+var lK=_n('view')
+_rz(z,lK,'class',0,e,s,gg)
+var aL=_oz(z,1,e,s,gg)
+_(lK,aL)
+_(r,lK)
 return r
 }
 e_[x[1]]={f:m1,j:[],i:[],ti:[],ic:[]}
 d_[x[2]]={}
 var m2=function(e,s,r,gg){
 var z=gz$gwx_3()
-var oH=_n('view')
-var cI=_oz(z,0,e,s,gg)
-_(oH,cI)
-_(r,oH)
+var eN=_n('view')
+_rz(z,eN,'class',0,e,s,gg)
+var bO=_oz(z,1,e,s,gg)
+_(eN,bO)
+_(r,eN)
 return r
 }
 e_[x[2]]={f:m2,j:[],i:[],ti:[],ic:[]}
@@ -1167,7 +1197,7 @@ var setCssToHead = function(file, _xcInvalid, info) {
 var Ca = {};
 var css_id;
 var info = info || {};
-var _C= [[[2,1],],[],];
+var _C= [[[2,1],],[".",[1],"page{ width: 100%; height: 100%; background-color: #f7f7f7; position: absolute; }\n",],];
 function makeup(file, opt) {
 var _n = typeof(file) === "number";
 if ( _n && Ca.hasOwnProperty(file)) return "";
@@ -1236,7 +1266,7 @@ setCssToHead([])();setCssToHead([[2,0]],undefined,{path:"./app.wxss"})();
 __wxAppCode__['app.wxss']=setCssToHead([[2,0]],undefined,{path:"./app.wxss"});    
 __wxAppCode__['app.wxml']=$gwx('./app.wxml');
 
-__wxAppCode__['pages/index/index.wxss']=undefined;    
+__wxAppCode__['pages/index/index.wxss']=setCssToHead([".",[1],"carousel{ width: 100%; height: ",[0,440],"; }\n",],undefined,{path:"./pages/index/index.wxss"});    
 __wxAppCode__['pages/index/index.wxml']=$gwx('./pages/index/index.wxml');
 
 __wxAppCode__['pages/me/me.wxss']=undefined;    
