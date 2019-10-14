@@ -1,0 +1,20 @@
+{
+	"status": 200,
+	"msg": "OK",
+	"data": [
+		{
+			"id": 1,
+			"movieId": "1001",
+			"image": "http://localhost:8000/imgs/carousel/batmanvssuperman.png",
+			"sort": 1,
+			"isShow": 1
+		},
+		{
+			"id": 1,
+			"movieId": "1001",
+			"image": "http://localhost:8000/imgs/carousel/spiderman.png",
+			"sort": 1,
+			"isShow": 1
+		}
+	]
+}
