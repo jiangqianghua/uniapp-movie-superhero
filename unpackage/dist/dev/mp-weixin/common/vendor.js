@@ -8400,7 +8400,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "usingComponents": {} }, "pages/search/serach": { "usingComponents": {} }, "pages/me/me": { "usingComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "电影预告", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": {}, "pages/search/serach": {}, "pages/me/me": {} }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "电影预告", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
 
 /***/ }),
 /* 8 */
@@ -8523,6 +8523,20 @@ function normalizeComponent (
   }
 }
 
+
+/***/ }),
+/* 15 */
+/*!*******************************************************************!*\
+  !*** D:/workspace/uniapp/uniapp-movie-superhero/common/common.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var serverUrl = "https://192.168.1.101:8000";var _default =
+
+{
+  serverUrl: serverUrl };exports.default = _default;
 
 /***/ })
 ]]);

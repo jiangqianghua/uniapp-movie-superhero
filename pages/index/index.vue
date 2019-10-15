@@ -7,6 +7,13 @@
 				</view>
 			</swiper-item>
 		</swiper>
+		
+		<view>
+			<view class="page-block super-hot">
+				<image src="" mode=""></image>
+				<view class=""></view>
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -19,7 +26,7 @@
 		},
 		onLoad() {
 			uni.request({
-				url: 'http://192.168.1.101:8000/index/carousel/list.json', //仅为示例，并非真实接口地址。
+				url: this.serverUrl+'/index/carousel/list.json', 
 				success: (res) => {
 					if (res.data.status == 200){
 						this.carouselList = res.data.data
