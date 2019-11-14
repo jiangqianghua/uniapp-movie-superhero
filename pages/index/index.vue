@@ -16,6 +16,80 @@
 				</view>
 			</view>
 		</view>
+		<scroll-view class="page-block hot" scroll-x="true">
+			<view class="single-poster">
+				<view class="poster-wapper">
+					<image src="../../static/poster/civilwar.jpg" class="poster"></image>
+					<view class="movie-name">
+						344445556664445556
+					</view>
+					<view class=""></view>
+				</view>
+			</view>
+			<view class="single-poster">
+				<view class="poster-wapper">
+					<image src="../../static/poster/civilwar.jpg" class="poster"></image>
+					<view class="movie-name">
+						34444555666
+					</view>
+					<view class=""></view>
+				</view>
+			</view>
+			<view class="single-poster">
+				<view class="poster-wapper">
+					<image src="../../static/poster/civilwar.jpg" class="poster"></image>
+					<view class="movie-name">
+						34444555666
+					</view>
+					<view class=""></view>
+				</view>
+			</view>
+			<view class="single-poster">
+				<view class="poster-wapper">
+					<image src="../../static/poster/civilwar.jpg" class="poster"></image>
+					<view class="movie-name">
+						34444555666
+					</view>
+					<view class=""></view>
+				</view>
+			</view>
+			<view class="single-poster">
+				<view class="poster-wapper">
+					<image src="../../static/poster/civilwar.jpg" class="poster"></image>
+					<view class="movie-name">
+						34444555666
+					</view>
+					<view class=""></view>
+				</view>
+			</view>
+			<view class="single-poster">
+				<view class="poster-wapper">
+					<image src="../../static/poster/civilwar.jpg" class="poster"></image>
+					<view class="movie-name">
+						34444555666
+					</view>
+					<view class=""></view>
+				</view>
+			</view>
+			<view class="single-poster">
+				<view class="poster-wapper">
+					<image src="../../static/poster/civilwar.jpg" class="poster"></image>
+					<view class="movie-name">
+						34444555666
+					</view>
+					<view class=""></view>
+				</view>
+			</view>
+			<view class="single-poster">
+				<view class="poster-wapper">
+					<image src="../../static/poster/civilwar.jpg" class="poster"></image>
+					<view class="movie-name">
+						34444555666
+					</view>
+					<view class=""></view>
+				</view>
+			</view>
+		</scroll-view>
 	</view>
 </template>
 
