@@ -8,10 +8,12 @@
 			</swiper-item>
 		</swiper>
 		
-		<view>
-			<view class="page-block super-hot">
-				<image src="" mode=""></image>
-				<view class=""></view>
+		<view class="page-block super-hot">
+			<view class="hot-title-wapper">
+				<image src="../../static/icos/hot.png" class="hot-ico"></image>
+				<view class="hot-title">
+					热门超英
+				</view>
 			</view>
 		</view>
 	</view>
