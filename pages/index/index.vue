@@ -17,87 +17,39 @@
 			</view>
 		</view>
 		<scroll-view class="page-block hot" scroll-x="true">
-			<view class="single-poster">
+			<view class="single-poster" v-for="(item, index) in hotSuperroList" :key="index">
 				<view class="poster-wapper">
-					<image src="../../static/poster/civilwar.jpg" class="poster"></image>
+					<image :src="item.cover" class="poster"></image>
 					<view class="movie-name">
-						344445556664445556
+						{{item.name}}
 					</view>
-					<view class=""></view>
-				</view>
-			</view>
-			<view class="single-poster">
-				<view class="poster-wapper">
-					<image src="../../static/poster/civilwar.jpg" class="poster"></image>
-					<view class="movie-name">
-						34444555666
-					</view>
-					<view class=""></view>
-				</view>
-			</view>
-			<view class="single-poster">
-				<view class="poster-wapper">
-					<image src="../../static/poster/civilwar.jpg" class="poster"></image>
-					<view class="movie-name">
-						34444555666
-					</view>
-					<view class=""></view>
-				</view>
-			</view>
-			<view class="single-poster">
-				<view class="poster-wapper">
-					<image src="../../static/poster/civilwar.jpg" class="poster"></image>
-					<view class="movie-name">
-						34444555666
-					</view>
-					<view class=""></view>
-				</view>
-			</view>
-			<view class="single-poster">
-				<view class="poster-wapper">
-					<image src="../../static/poster/civilwar.jpg" class="poster"></image>
-					<view class="movie-name">
-						34444555666
-					</view>
-					<view class=""></view>
-				</view>
-			</view>
-			<view class="single-poster">
-				<view class="poster-wapper">
-					<image src="../../static/poster/civilwar.jpg" class="poster"></image>
-					<view class="movie-name">
-						34444555666
-					</view>
-					<view class=""></view>
-				</view>
-			</view>
-			<view class="single-poster">
-				<view class="poster-wapper">
-					<image src="../../static/poster/civilwar.jpg" class="poster"></image>
-					<view class="movie-name">
-						34444555666
-					</view>
-					<view class=""></view>
-				</view>
-			</view>
-			<view class="single-poster">
-				<view class="poster-wapper">
-					<image src="../../static/poster/civilwar.jpg" class="poster"></image>
-					<view class="movie-name">
-						34444555666
-					</view>
-					<view class=""></view>
+					<stars :score="item.score" :showScore="1"></stars>
 				</view>
 			</view>
 		</scroll-view>
+		
+		<view class="page-block super-hot">
+			<view class="hot-title-wapper">
+				<image src="../../static/icos/interest.png" class="hot-ico"></image>
+				<view class="hot-title">
+					热门预告
+				</view>
+			</view>
+		</view>
 	</view>
 </template>
 
 <script>
+	import stars from '../../components/stars/stars'
 	export default {
+		components: {
+			stars
+		},
 		data() {
 			return {
-				carouselList: []
+				carouselList: [],
+				hotSuperroList: [],
+				trailerList: []
 			}
 		},
 		onLoad() {
@@ -106,6 +58,22 @@
 				success: (res) => {
 					if (res.data.status == 200){
 						this.carouselList = res.data.data
+					}
+				}
+			});
+			uni.request({
+				url: this.serverUrl+'/index/hotdata.json', 
+				success: (res) => {
+					if (res.data.status == 200){
+						this.hotSuperroList = res.data.data
+					}
+				}
+			});
+			uni.request({
+				url: this.serverUrl+'/index/trailer.json', 
+				success: (res) => {
+					if (res.data.status == 200){
+						this.trailerList = res.data.data
 					}
 				}
 			});
