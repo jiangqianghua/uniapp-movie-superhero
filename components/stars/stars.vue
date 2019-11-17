@@ -1,7 +1,7 @@
 <template>
 	<view class="movie-scroe-wapper">
-		<image v-for="yellow in yellowScore" :key="yellow" src="../../static/icos/star-yellow.png" class="star-ico"></image>
-		<image v-for="gray in grayScore" :key="gray" src="../../static/icos/star-gray.png" class="star-ico"></image>
+		<image v-for="yellow in yellowScore" src="../../static/icos/star-yellow.png" class="star-ico"></image>
+		<image v-for="gray in grayScore" src="../../static/icos/star-gray.png" class="star-ico"></image>
 		<view class="movie-scroe" v-show="showScore == 1">
 			{{score}}
 		</view>

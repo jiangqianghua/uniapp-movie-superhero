@@ -21,11 +21,11 @@
 			"createTime": "2012-8-2 00:00:00"
 		},
 		{
-			"id": "1",
+			"id": "2",
 			"name": "蝙蝠侠",
 			"poster": "http://192.168.1.102:8000/imgs/poster/civilwar.jpg",
 			"cover": "http://192.168.1.102:8000/imgs/poster/civilwar.jpg",
-			"trailer": "a.mp4",
+			"trailer": "http://192.168.1.102:8000/media/1.mp4",
 			"score": 8,
 			"prisedCounts": 1000,
 			"basicInfo": "2018/美国/科幻",
@@ -39,11 +39,11 @@
 			"createTime": "2012-8-2 00:00:00"
 		},
 		{
-			"id": "1",
+			"id": "3",
 			"name": "蝙蝠侠",
 			"poster": "http://192.168.1.102:8000/imgs/poster/civilwar.jpg",
 			"cover": "http://192.168.1.102:8000/imgs/poster/civilwar.jpg",
-			"trailer": "a.mp4",
+			"trailer": "http://192.168.1.102:8000/media/1.mp4",
 			"score": 6,
 			"prisedCounts": 1000,
 			"basicInfo": "2018/美国/科幻",
@@ -57,11 +57,11 @@
 			"createTime": "2012-8-2 00:00:00"
 		},
 		{
-			"id": "1",
+			"id": "4",
 			"name": "蝙蝠侠",
 			"poster": "http://192.168.1.102:8000/imgs/poster/civilwar.jpg",
 			"cover": "http://192.168.1.102:8000/imgs/poster/civilwar.jpg",
-			"trailer": "a.mp4",
+			"trailer": "http://192.168.1.102:8000/media/1.mp4",
 			"score": 4,
 			"prisedCounts": 1000,
 			"basicInfo": "2018/美国/科幻",
