@@ -54,24 +54,24 @@
 		</view>
 		
 		<view class="page-block guess-u-like">
-			<view class="single-like-movie">
-				<image :src="'http://192.168.1.102:8000/imgs/poster/civilwar.jpg'" class="like-movie"></image>
+			<view class="single-like-movie" v-for="(item, index) in guessLikesList">
+				<image :src="item.cover" class="like-movie"></image>
 				<view class="movie-desc">
 					<view class="movie-title">
-						蝙蝠大战超人2333344
+						{{item.name}}
 					</view>
 					<stars :score="5" :showScore="0"></stars>
 					<view class="movie-info">
-						2018 /  美国 / 科幻 动作
+						{{item.basicInfo}}
 					</view>
-					<view class="movie-info">2018 /  美国 / 科幻 动作</view>
+					<view class="movie-info">{{item.releaseData}}</view>
 				</view>
-				<view class="movie-oper" @click="praiseMe">
+				<view class="movie-oper" @click="praiseMe(index)">
 					<image src="../../static/icos/praise.png" class="praise-ico"></image>
 					<view class="praise-me">
 						点赞
 					</view>
-					<view :animation="animationData" class="praise-me animation-opacity">
+					<view :animation="animationDataArr[index]" class="praise-me animation-opacity">
 						+1
 					</view>
 				</view>
@@ -91,15 +91,22 @@
 				carouselList: [],
 				hotSuperroList: [],
 				trailerList: [],
-				animationData: {}
+				animationData: {},
+				animationDataArr: [],
+				guessLikesList: []
 			}
+		},
+		onPullDownRefresh() {
+			this.refresh()
 		},
 		onUnload() {
 			this.animationData = {}
+			this.animationDataArr = []
 		},
 		onLoad() {
-			
+			// #ifdef APP-PLUS || MP-WEIXIN || H5
 			this.animation = uni.createAnimation()
+			// #endif
 			
 			uni.request({
 				url: this.serverUrl+'/index/carousel/list.json', 
@@ -125,21 +132,51 @@
 					}
 				}
 			});
+			this.refresh()
+			
 		},
 		methods: {
-			praiseMe() {
+			refresh() {
+				uni.showLoading({
+					mask: true
+				})
+				// 在导航栏上显示加载动画
+				uni.showNavigationBarLoading()
+				uni.request({
+					url: this.serverUrl+'/index/guesslike.json', 
+					success: (res) => {
+						if (res.data.status == 200){
+							this.guessLikesList = res.data.data
+							this.animationDataArr = new Array(this.guessLikesList.length)
+						}
+					},
+					complete: () => {
+						uni.hideNavigationBarLoading()
+						uni.stopPullDownRefresh()
+						uni.hideLoading()
+					}
+				});
+			},
+			praiseMe(index) {
+				// #ifdef APP-PLUS || MP-WEIXIN || H5
 				this.animation.translateY(-60).opacity(1).step({
 					duration:400
 				})
-				this.animationData = this.animation.export()
-				
+				this.animationData = this.animation
+				this.animationDataArr.splice(index, 1, this.animationData.export())
+				// Vue.$set(this.animationDataArr, index, this.animationData.export())
+				// this.animationDataArr[index] = this.animationData.export()
 				setTimeout(function() {
 					// 还原动画
 					this.animation.translateY(0).opacity(0).step({
 						duration:0
 						})
-					this.animationData = this.animation.export()
+					this.animationData = this.animation
+					this.animationDataArr.splice(index, 1, this.animationData.export())
+					// Vue.$set(this.animationDataArr, index, this.animationData.export())
+					// this.animationDataArr[index] = this.animationData.export()
 				}.bind(this), 800);
+				// #endif
 			}
 		}
 	}
